@@ -34,19 +34,24 @@ This project provides:
 # 🏗 System Architecture
 
 User (Browser)
-        ↓
+│
+▼
 React Frontend (UI)
-        ↓
+│
+▼
 Axios API Call
-        ↓
+│
+▼
 FastAPI Backend
-        ↓
+│
+▼
 DenseNet CNN Model
-        ↓
+│
+▼
 Prediction + Confidence
-        ↓
+│
+▼
 UI Visualization
-
 ---
 
 # 🛠 Tech Stack
@@ -106,16 +111,18 @@ DenseNet-based Convolutional Neural Network
 retinopathy-frontend/
 │
 ├── public/
+│ ├── index.html
+│
 ├── src/
-│   ├── App.js
-│   ├── index.js
-│   ├── index.css
+│ ├── App.js
+│ ├── index.js
+│ ├── index.css
 │
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
+├── .gitignore
 └── README.md
-
 ---
 
 # ⚙️ Installation & Local Setup
