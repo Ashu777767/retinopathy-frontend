@@ -8,7 +8,7 @@ This application connects to a FastAPI backend powered by a **DenseNet-based CNN
 
 # 🚀 Live Demo
 
-Frontend: (Add Vercel link here after deployment)
+Frontend: (https://retinopathy-frontend-sigma.vercel.app)
 
 Backend API (HuggingFace Spaces):
 https://github.com/Ashu777767/retinopathy-backend
