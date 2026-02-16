@@ -1,78 +1,73 @@
-# 🧠 AI Diabetic Retinopathy Detection – Frontend
+# 🧠 AI Diabetic Retinopathy Detection — Frontend
 
-A production-ready React web application for real-time diabetic retinopathy screening using deep learning.
-
-This application connects to a FastAPI backend powered by a **DenseNet-based CNN model** to classify retinal fundus images into 5 severity stages.
+Production-ready React web application for real-time diabetic retinopathy screening powered by a DenseNet-based deep learning model.
 
 ---
 
-# 🚀 Live Demo
+## 🚀 Live Application
 
-Frontend: (https://retinopathy-frontend-sigma.vercel.app)
+🌐 Frontend (Vercel):  
+https://retinopathy-frontend-sigma.vercel.app
 
-Backend API (HuggingFace Spaces):
+🧠 Backend API (HuggingFace Spaces):  
 https://github.com/Ashu777767/retinopathy-backend
 
 ---
 
-# 📌 Project Overview
+## 📌 Project Overview
 
-Diabetic Retinopathy (DR) is a diabetes complication that affects the eyes.  
-Early detection is critical to prevent vision loss.
+Diabetic Retinopathy (DR) is a diabetes complication that affects the retina and may lead to blindness if untreated.
 
-This project provides:
+This frontend provides a modern, responsive interface for:
 
-- 📤 Image Upload Prediction
-- 📷 Live Camera Real-Time Screening
-- 📊 Confidence Score Visualization
-- 🩺 Severity-Based Risk Guidance
-- 🔁 Clear Report + Reset Functionality
-- ⚡ Automatic Camera Lifecycle Handling
+- 📤 Uploading retinal fundus images
+- 📷 Real-time live camera screening
+- 📊 Confidence score visualization
+- 🩺 Severity-based medical guidance
+- 🔁 Instant report clearing without page reload
+- ⚡ Intelligent camera lifecycle management
 
 ---
 
-# 🏗 System Architecture
+## 🏗 System Architecture
 
+```
 User (Browser)
-│
-▼
+        ↓
 React Frontend (UI)
-│
-▼
-Axios API Call
-│
-▼
+        ↓
+Axios API Call (POST /predict)
+        ↓
 FastAPI Backend
-│
-▼
+        ↓
 DenseNet CNN Model
-│
-▼
-Prediction + Confidence
-│
-▼
-UI Visualization
+        ↓
+Prediction + Confidence Score
+        ↓
+Result Visualization in UI
+```
+
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-## 🎨 Frontend
+### 🎨 Frontend
 - React.js
 - Tailwind CSS
 - Axios
 - Lucide Icons
 - HTML5 MediaDevices API
 
-## ⚙ Backend
+### ⚙ Backend
 - FastAPI
 - TensorFlow / Keras
 - DenseNet-based CNN
 - Python
-- HuggingFace Spaces
+- HuggingFace Spaces (Deployment)
 
 ---
 
-# 🧠 Model Details
+## 🧠 Model Details
 
 ### Architecture:
 DenseNet-based Convolutional Neural Network
@@ -80,8 +75,8 @@ DenseNet-based Convolutional Neural Network
 ### Why DenseNet?
 - Strong gradient flow
 - Efficient parameter usage
-- Better feature reuse
-- High performance on medical imaging
+- Feature reuse across layers
+- High performance on medical imaging tasks
 
 ### Classification Categories:
 
@@ -93,95 +88,115 @@ DenseNet-based Convolutional Neural Network
 
 ---
 
-# ✨ Key Features
+## ✨ Key Features
 
-✅ Upload high-resolution fundus image  
+✅ High-resolution fundus image upload  
 ✅ Live camera real-time detection  
-✅ Confidence percentage visualization  
-✅ Risk level display  
-✅ Medical recommendation suggestion  
+✅ Confidence percentage progress bar  
+✅ Risk level classification display  
+✅ Severity-based recommendation guidance  
 ✅ Clear report without page reload  
 ✅ Camera auto-stop when switching mode  
-✅ Responsive modern UI  
+✅ Fully responsive modern UI  
 
 ---
 
-# 📂 Folder Structure
+## 📂 Project Structure
 
+```
 retinopathy-frontend/
 │
 ├── public/
-│ ├── index.html
+│   └── index.html
 │
 ├── src/
-│ ├── App.js
-│ ├── index.js
-│ ├── index.css
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
 │
 ├── tailwind.config.js
 ├── postcss.config.js
 ├── package.json
 ├── .gitignore
 └── README.md
+```
+
 ---
 
-# ⚙️ Installation & Local Setup
+## ⚙️ Local Setup
 
-## 1️⃣ Clone Repository
+### 1️⃣ Clone Repository
 
-git clone https://github.com/Ashu777767/retinopathy-frontend.git  
+```
+git clone https://github.com/Ashu777767/retinopathy-frontend.git
 cd retinopathy-frontend
+```
 
-## 2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 
+```
 npm install
+```
 
-## 3️⃣ Start Development Server
+### 3️⃣ Start Development Server
 
+```
 npm start
+```
 
 Application runs at:
 
+```
 http://localhost:3000
+```
 
 ---
 
-# 🔗 Backend Setup
+## 🔗 Backend Setup
 
 Backend Repository:
+
 https://github.com/Ashu777767/retinopathy-backend
 
-Follow backend README instructions to run locally  
-or use deployed API endpoint.
+You can:
+
+- Run backend locally using its README instructions
+OR
+- Use deployed HuggingFace API endpoint (already configured)
 
 ---
 
-# 🌐 Deployment
+## 🌐 Deployment
 
-Frontend recommended deployment:
-- Vercel
+### Frontend Deployment:
+- Vercel (Recommended)
 - Netlify
 
-Backend deployed on:
+### Backend Deployment:
 - HuggingFace Spaces
 
----
-
-# 📊 Future Improvements
-
-- Add Grad-CAM visualization
-- Add Model Accuracy metrics
-- Add Confusion Matrix
-- Add Authentication system
-- Add Image history tracking
-- Add Multi-language support
+Deployment is fully CI/CD enabled — pushing to `main` branch automatically triggers redeployment.
 
 ---
 
+## 📊 Future Improvements
+
+- Grad-CAM heatmap visualization
+- Model accuracy dashboard
+- Confusion matrix integration
+- Authentication system
+- Patient history tracking
+- PDF medical report export
+- Multi-language support
+
+---
 
 
-# 👨‍💻 Author
+---
 
-Ashutosh Kumar Jha
+## 👨‍💻 Author
+
+Ashutosh Kumar Jha  
+B.E Computer Science
 
 If you found this project useful, please consider giving it a ⭐ star.
