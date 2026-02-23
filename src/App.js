@@ -295,19 +295,19 @@ const LiveCameraSection = () => {
         <canvas ref={canvasRef} className="hidden" />
 
 {result && isCameraOn && (
-          <div className="absolute top-6 left-6 right-6">
-            <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 animate-in zoom-in-95">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <div className={`w-3 h-3 rounded-full animate-pulse ${stage.color}`} />
-                  <span className={`font-bold text-lg ${stage.text}`}>{stage.label}</span>
-                </div>
-                <span className="text-blue-600 font-mono font-bold">{confidence}%</span>
-              </div>
-            </div>
-          </div>
-        )}
-
+  <div className="absolute top-6 left-6 right-6">
+    <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50">
+      <div className="flex justify-between items-center">
+        <span className={`font-bold text-lg ${stage.text}`}>
+          {stage.label}
+        </span>
+        <span className="font-mono font-bold text-blue-600">
+          {confidence}%
+        </span>
+      </div>
+    </div>
+  </div>
+)}
         {isCameraOn && (
           <div className="absolute bottom-6 right-6 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
             <div className={`w-2 h-2 rounded-full ${isCapturing ? 'bg-red-500 animate-ping' : 'bg-gray-400'}`} />
