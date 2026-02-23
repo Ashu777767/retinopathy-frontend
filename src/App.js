@@ -329,6 +329,24 @@ const LiveCameraSection = () => {
             <p className="text-center mt-2 text-sm font-medium text-gray-500">Live Prediction Confidence</p>
           </div>
         )}
+{/* Medical Recommendation Panel */}
+{result && isCameraOn && (
+  <div className="mt-4 bg-blue-50 p-4 rounded-2xl border border-blue-200 shadow-sm">
+    <p className="text-sm font-bold text-gray-700">
+      🩺 Recommended Medical Action
+    </p>
+
+    <p className="text-sm text-gray-600 mt-2">
+      {stage.action}
+    </p>
+
+    {(stage.risk === "High" || stage.risk === "Critical") && (
+      <p className="text-red-600 font-semibold mt-2">
+        ⚠ Please consult an ophthalmologist immediately.
+      </p>
+    )}
+  </div>
+)}
 
         {/* Action Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
