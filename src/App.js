@@ -294,19 +294,54 @@ const LiveCameraSection = () => {
         )}
         <canvas ref={canvasRef} className="hidden" />
 
-        {result && isCameraOn && (
-          <div className="absolute top-6 left-6 right-6">
-            <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 animate-in zoom-in-95">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <div className={`w-3 h-3 rounded-full animate-pulse ${stage.color}`} />
-                  <span className={`font-bold text-lg ${stage.text}`}>{stage.label}</span>
-                </div>
-                <span className="text-blue-600 font-mono font-bold">{confidence}%</span>
-              </div>
-            </div>
-          </div>
-        )}
+        // {result && isCameraOn && (
+        //   <div className="absolute top-6 left-6 right-6">
+        //     <div className="bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 animate-in zoom-in-95">
+        //       <div className="flex justify-between items-center">
+        //         <div className="flex items-center gap-3">
+        //           <div className={`w-3 h-3 rounded-full animate-pulse ${stage.color}`} />
+        //           <span className={`font-bold text-lg ${stage.text}`}>{stage.label}</span>
+        //         </div>
+        //         <span className="text-blue-600 font-mono font-bold">{confidence}%</span>
+        //       </div>
+        //     </div>
+        //   </div>
+        // )}
+  {result && (
+  <div className="absolute top-6 left-6 right-6">
+    <div className={`p-5 rounded-2xl shadow-xl border animate-in zoom-in-95
+      ${
+        stage.risk === "Low"
+          ? "bg-green-100 border-green-400"
+          : stage.risk === "Moderate"
+          ? "bg-yellow-100 border-yellow-400"
+          : stage.risk === "High"
+          ? "bg-orange-100 border-orange-400"
+          : "bg-red-100 border-red-500"
+      }
+    `}>
+
+      <div className="flex justify-between items-center mb-2">
+        <span className={`font-bold text-lg ${stage.text}`}>
+          {stage.label}
+        </span>
+        <span className="font-mono font-bold text-blue-700">
+          {confidence}%
+        </span>
+      </div>
+
+      <p className="text-sm text-gray-700">
+        {stage.action}
+      </p>
+
+      {(stage.risk === "High" || stage.risk === "Critical") && (
+        <p className="text-red-600 font-semibold mt-2">
+          ⚠ Immediate ophthalmologist consultation recommended.
+        </p>
+      )}
+    </div>
+  </div>
+)} //new
 
         {isCameraOn && (
           <div className="absolute bottom-6 right-6 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
