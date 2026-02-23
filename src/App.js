@@ -295,7 +295,7 @@ const LiveCameraSection = () => {
         <canvas ref={canvasRef} className="hidden" />
 
         
-  {result && (
+  {result && isCameraOn(
   <div className="absolute top-6 left-6 right-6">
     <div className={`p-5 rounded-2xl shadow-xl border animate-in zoom-in-95
       ${
@@ -329,7 +329,7 @@ const LiveCameraSection = () => {
       )}
     </div>
   </div>
-)} //new
+)} 
 
         {isCameraOn && (
           <div className="absolute bottom-6 right-6 flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
